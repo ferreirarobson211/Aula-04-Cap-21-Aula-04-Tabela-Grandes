@@ -2,120 +2,77 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela</title>
+    <title>População dos estados Brasileiros</title>
     <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
         table{
             width: 100%;
             border-collapse: collapse;
-            /* Obrigatório para ter o título da tabela fixo */
-            font-family:Arial, Times, serif;
             font-size: 14px;
-
         }
-        
-        td, th {
-            border: 1px solid #000000;
+        caption{
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #d9d9d9;
+            border: 1px solid #000;
+            border-bottom: none;
+        }
+        th, td{
+            border: 1px solid #000;
             padding: 8px;
             vertical-align: middle;
-            background-color: #ffffff;
         }
-        th{
+        thead th{
+            background-color: #c0c0c0;
+            text-align: left;
             font-weight: bold;
         }
-        tbody td:nth-child(1) { text-align: left;}
-        tbody td:nth-child(2) { text-align: right;}
-        tbody td:nth-child(3) { text-align: left;}
-        
-        thead, tfoot td:nth-child(2) {text-align: right;} 
-        tfoot td:nth-child(3) {text-align: left;
-        }
-        tfoot > tr > td{
-            background-color: #b5b5b5;
-            font-weight: bold;
-        }
-        thead > tr > th {
-             /* No título da linha do cabeçalho vou grudar "sticky" */
-            position: sticky; /* grudar */
-            top: 0; /* na posição 0 */
-            background-color: #bdbdbd;
-        }
-        
-        caption {
-            font-size: 3,5em;
-            /* Tamanho da fonte */
-            font-weight: bold;
-            /* Para colocar em negrito */
-            padding: 10px;
-             /* Colocar um fundo no meu caption */
-            background-color: bold;
-        }
-        /* Efeito Zebra
-            tdoby > tr - Todo tr que é filho do tdoby
-            pseudo-classe tr:nth-child(2n) - Todo filho atualizando no intervalo de 2 linhas.
-            Outros exemplos:
-            3n - de 3 em 3 linhas;
-            2n-1 - Vai iniciar na primeira linha;
-            odd - Linhas impares;
-            even - Linhas pares;
+        tbody td:nth-child(1) { text-align: left; }
+        tbody td:nth-child(2) { text-align: right; }
+        tbody td:nth-child(3) { text-align: left; }
 
-            Posso também personalisar somente as pares ou impares.
-
-            tbody > tr:nth-child(odd) {
-                background-color: blue;
-            }
-                
-            tbody > tr:nth-child(even) {
-                background-color: yellow;
-            }
-        */
-        tbody > tr:nth-child(2n){
-            background-color: gray;
+        tfoot td{
+            background-color: #808080;
+            color: #000000;
+            font-weight: bold;
         }
+
     </style>
 </head>
 <body>
-    <h1>Uso de tabelas grandes</h1>
-    <!-- Anatomia para tabelas grandes 
-        Table
-            Caption - Legenda da tabela
-            Thead - cabeça
-                TR, TD, TH
-            Tbody - corpo
-                TR, TD, TH
-            Tfoot - pé 
-                TR, TD, TH
-    -->
     <table>
-        <tr class="Titulos-principal">
-            <th colspan="3">População dos Estados Brasileiros - 2024</th>
-        </tr>
-          <tr>
-                <th style="width: 40%;">Estado</th>
-                <th style="width: 20%;">População</th>
-                <th style="width: 40%;"> comando HTML Utilizado</th>
+        <caption><strong>População  dos Estados Brasileiros - 20024</strong></caption>
+        <thead>
+            <tr>
+                <th>Estado</th>
+                <th>População</th>
+                <th>Comandos HTML Utilizado</th>
             </tr>
+        </thead>
         <tbody>
             <tr>
                 <td>Acre</td>
-                <td><mark>530.018</mark></td>
-                <td>'<strong>Negrito</strong>' e <mark>Destacado</mark></td>
+                <td>830.018</td>
+                <td><strong>'Negrito'</strong> e <mark>'destacado'</mark></td>
             </tr>
             <tr>
-                <td><em>Alagoas</em></td>
-                <td>3.365.651</td>
-                <td>'<i>Itálico</i>'</td>
+                <td><i>Alagoas</i></td>
+                <td>3.365.351</td>
+                <td><em>'Itálico'</em></td>
             </tr>
             <tr>
                 <td><u>Amapá</u></td>
-                <td>877.613</td>
-                <td>'<u>Texo sublinhado</u>'</td>
+                <td><u>877.613</u></td>
+                <td><u>'Texto sublinhado'</u></td>
             </tr>
             <tr>
-                <td><s><u>Amazonas</u></s></td>
+                <td><s>Amazonas</s></td>
                 <td>4.269.995</td>
-                <td>'<s>Texto riscado</s>' e '<u>texto sublinhado</u>'</td>
+                <td><s>'Texto riscado'</s> e <u>'Texto sublinhado'</u></td>
             </tr>
             <tr>
                 <td>Bahia</td>
@@ -123,80 +80,76 @@
                 <td>'Texto sobrescrito'</td>
             </tr>
             <tr>
-                <td><abbr title="ceará">CE</abbr></td>
-                <td>9.240.980</td>
-                <td>'Abreviação'</td>
+                <td><u>Ce</u></td>
+                <td>9.240.580</td>
+                <td><abbr>'Abreviação'</abbr></td>
             </tr>
             <tr>
-                <td><strong>Destrito Federal</strong></td>
+                <td>Destrito Federal</td>
                 <td>3.098.883</td>
-                <td>'<strong>Texto em Negrito</strong>'</td>
+                <td><strong>'Texto em negrito'</strong></td>
             </tr>
             <tr>
-                <td><q>Espirito Santo</q></td>
+                <td>"Esperito Santo"</td>
                 <td>4.108.508</td>
-                <td>'"Citação curta"'</td>
+                <td><q>'Citação curta'</q></td>
             </tr>
             <tr>
-                <td>Goias</td>
+                <td>Goiás</td>
                 <td>7.206.589</td>
-                <td>'Citação em Fonte'</td>
+                <td><cite>'Citação de fonte</cite></td>
             </tr>
             <tr>
                 <td>Maranhão</td>
                 <td>6.775.805</td>
-                <td>'Texto monoespaçado'</td>
+                <td><code>'Texto monoespaçado'</code></td>
             </tr>
             <tr>
-                <td><pre>Mato Grosso</pre></td>
-                <td>3.650.813</td>
-                <td>Texto pré-formatado</td>
+                <td>Mato Grosso</td>
+                <td>3.658.813</td>
+                <td><pre>Texto pré-formatado</pre></td>
             </tr>
             <tr>
-                <td>Paraiba</td>
+                <td>Paraíba</td>
                 <td>4.059.905</td>
                 <td>'Texto pequeno'</td>
             </tr>
             <tr>
-                <td>Piaui</td>
-                <td>3.281.400</td>
-                <td>'Citação em bloco'</td>
+                <td>Piauí</td>
+                <td>3.281.480</td>
+                <td>'Texto subscrito'</td>
             </tr>
             <tr>
-                <td class="align-center">
-                    <blockquote>Rio de Janeiro</blockquote>
-                </td>
-                <td>16.054.524</td>
-                <td>Citação em bloco</td>
+                <td><blockquote>Rio de Janeiro</blockquote></td>
+                <td>16.054.542</td>
+                <td>'<blockquote>Citação em bloco</blockquote>'</td>
             </tr>
             <tr>
-                <td><strong>Rio Grande do Sul</strong></td>
+                <td><strong>Rio Grande do sul</strong></td>
                 <td>10.882.965</td>
-                <td>'<strong>Negrito</strong>'</td>
+                <td><strong>'Negrito'</strong></td>
             </tr>
             <tr>
-                <td><i>Rondônia</i></td>
+                <td><em>Rondônia</em></td>
                 <td>1.616.379</td>
-                <td>'<i>Itálico</i>'</td>
+                <td><em>'Itálico</em></td>
             </tr>
             <tr>
                 <td><mark>Roraima</mark></td>
                 <td>636.707</td>
-                <td>'<mark>Texto destacado</mark>'</td>
+                <td><mark>'Texto destacado'</mark></td>
             </tr>
             <tr>
-                <td><abbr title="Tocantis">To</abbr></td>
+                <td><abbr title="Tocantins">TO</abbr></td>
                 <td>1.607.363</td>
-                <td>'Abreviação'</td>
+                <td><abbr title="Abreviação">Abreviação</abbr></td>
+            </tr>
+            <tr>
+                <td><strong>Total da população estimada:</strong></td>
+                <td><strong>Soma total</strong></td>
+                <td>Realizar a somas das colonas</td>
             </tr>
         </tbody>
-        <tfoot>
-            <tr class="footer-total">
-                <td>Total da População estimada</td>
-                <td>Soma total</td>
-                <td>Realizar a soma das colunas</td> 
-            </tr>
-        </tfoot>
     </table>
 </body>
 </html>
